@@ -23,7 +23,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-primary">
-                  Number of tests: 9
+                  Number of tests: 23
                 </span>
               </h4>
 
@@ -32,7 +32,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-success">
-                  Passed: 3
+                  Passed: 21
                 </span>
               </h4>
 
@@ -41,7 +41,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-danger">
-                  Failed: 3
+                  Failed: 2
                 </span>
               </h4>
 
@@ -50,7 +50,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-warning">
-                  Disabled: 3
+                  Disabled: 0
                 </span>
               </h4>
 
@@ -60,16 +60,49 @@
 
         <div class="list-group">
           
-            <a href=#TestCasesOneUnitTests class="list-group-item list-group-item-action">
-              TestCasesOneUnitTests
+            
+            <a href=#BoxTest class="list-group-item list-group-item-action list-group-item-success">
+            
+            BoxTest
+            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-success float-right">1</span>
+            <span class="badge badge-pill badge-primary float-right">1</span>
             </a>
           
-            <a href=#TestCasesTwoUnitTests class="list-group-item list-group-item-action">
-              TestCasesTwoUnitTests
+            
+            <a href=#InterfaceUnitTest class="list-group-item list-group-item-action list-group-item-success">
+            
+            InterfaceUnitTest
+            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-success float-right">5</span>
+            <span class="badge badge-pill badge-primary float-right">5</span>
             </a>
           
-            <a href=#TestCasesThreeUnitTests class="list-group-item list-group-item-action">
-              TestCasesThreeUnitTests
+            
+            <a href=#EstimatorModule class="list-group-item list-group-item-action list-group-item-success">
+            
+            EstimatorModule
+            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-success float-right">4</span>
+            <span class="badge badge-pill badge-primary float-right">4</span>
+            </a>
+          
+            
+            <a href=#Wifi class="list-group-item list-group-item-action list-group-item-success">
+            
+            Wifi
+            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-success float-right">7</span>
+            <span class="badge badge-pill badge-primary float-right">7</span>
+            </a>
+          
+            
+            <a href=#TriggerModule class="list-group-item list-group-item-action list-group-item-danger">
+            
+            TriggerModule
+            <span class="badge badge-pill badge-danger float-right">2</span>
+            <span class="badge badge-pill badge-success float-right">4</span>
+            <span class="badge badge-pill badge-primary float-right">6</span>
             </a>
           
         </div>
@@ -77,22 +110,22 @@
     </div>
 
     
-      <div class="card test-suite-container" id=TestCasesOneUnitTests>
+      <div class="card test-suite-container" id=BoxTest>
         <div class="card-header">
           <h5>
-            TestCasesOneUnitTests
+            BoxTest
             <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
               <label class="btn btn-primary btn-sm active">
-                <input type="radio" name="options" id=TestCasesOneUnitTestsAll autocomplete="off" checked> Show All
+                <input type="radio" name="options" id=BoxTestAll autocomplete="off" checked> Show All
               </label>
               <label class="btn btn-success btn-sm">
-                <input type="radio" name="options" id=TestCasesOneUnitTestsPassed autocomplete="off"> Show Only Passed
+                <input type="radio" name="options" id=BoxTestPassed autocomplete="off"> Show Only Passed
               </label>
               <label class="btn btn-danger btn-sm">
-                <input type="radio" name="options" id=TestCasesOneUnitTestsFailed autocomplete="off"> Show Only Failed
+                <input type="radio" name="options" id=BoxTestFailed autocomplete="off"> Show Only Failed
               </label>
 			  <label class="btn btn-warning btn-sm">
-                <input type="radio" name="options" id=TestCasesOneUnitTestsDisabled autocomplete="off"> Show Only Disabled
+                <input type="radio" name="options" id=BoxTestDisabled autocomplete="off"> Show Only Disabled
               </label>
             </div>
           </h5>
@@ -104,7 +137,7 @@
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-primary">
-                    Number of tests: 3
+                    Number of tests: 1
                   </span>
                 </h4>
 
@@ -122,7 +155,7 @@
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-danger">
-                    Failed: 1
+                    Failed: 0
                   </span>
                 </h4>
 
@@ -131,7 +164,7 @@
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-warning">
-                    Disabled: 1
+                    Disabled: 0
                   </span>
                 </h4>
 
@@ -139,106 +172,56 @@
             </div>
           </div>
 
-          <div class="accordion" id=TestCasesOneUnitTestsFailedTests>
-            
-              
-            
-              
-                <div class="card border-danger mb-3">
-                  <div class="card-header" id=TestThatFailesOneFailedHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-danger" type="button" data-toggle="collapse" data-target=#TestThatFailesOneFailedCollapse aria-expanded="false" aria-controls=TestThatFailesOneFailedCollapse>
-                        TestThatFailesOne
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=TestThatFailesOneFailedCollapse class="collapse" aria-labelledby=TestThatFailesOneFailedHeading data-parent=#TestCasesOneUnitTestsFailedTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
-                      
-                        <p class="card-text">Failure: c:\users\spencer.robertson\documents\projects\cid\web services testing\webservicestests\webservicestests\test_cases_one.cpp:535
-Value of: FALSE
-  Actual: false
-Expected: true</p>
-                      
-                    </div>
-                  </div>
-                </div>
-              
+          <div class="accordion" id=BoxTestFailedTests>
             
               
             
           </div>
-          <div class="accordion" id=TestCasesOneUnitTestsPassedTests>
+          <div class="accordion" id=BoxTestPassedTests>
             
               
                 <div class="card border-success mb-3">
-                  <div class="card-header" id=TestThatPassesOnePassedHeading>
+                  <div class="card-header" id=dummyPassedHeading>
                     <h2 class="mb-0">
-                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#TestThatPassesOnePassedCollapse aria-expanded="false" aria-controls=TestThatPassesOnePassedCollapse>
-                        TestThatPassesOne
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#dummyPassedCollapse aria-expanded="false" aria-controls=dummyPassedCollapse>
+                        dummy
                       </button>
                     </h2>
                   </div>
 
-                  <div id=TestThatPassesOnePassedCollapse class="collapse" aria-labelledby=TestThatPassesOnePassedHeading data-parent=#TestCasesOneUnitTestsPassedTests>
+                  <div id=dummyPassedCollapse class="collapse" aria-labelledby=dummyPassedHeading data-parent=#BoxTestPassedTests>
                     <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
+                      <h5 class="card-title">Time: 0.016</h5>
                     </div>
                   </div>
                 </div>
-              
-            
-              
-            
               
             
           </div>
-		  <div class="accordion" id=TestCasesOneUnitTestsDisabledTests>
+		  <div class="accordion" id=BoxTestDisabledTests>
             
-              
-            
-              
-            
-              
-                <div class="card border-warning mb-3">
-                  <div class="card-header" id=DISABLED_TestThatIsDisabledOneDisabledHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-warning" type="button" data-toggle="collapse" data-target=#DISABLED_TestThatIsDisabledOneDisabledCollapse aria-expanded="false" aria-controls=DISABLED_TestThatIsDisabledOneDisabledCollapse>
-                        DISABLED_TestThatIsDisabledOne
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=DISABLED_TestThatIsDisabledOneDisabledCollapse class="collapse" aria-labelledby=DISABLED_TestThatIsDisabledOneDisabledHeading data-parent=#TestCasesOneUnitTestsDisabledTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Disabled Test</h5>
-                    </div>
-                  </div>
-                </div>
               
             
           </div>
         </div>
       </div>
     
-      <div class="card test-suite-container" id=TestCasesTwoUnitTests>
+      <div class="card test-suite-container" id=InterfaceUnitTest>
         <div class="card-header">
           <h5>
-            TestCasesTwoUnitTests
+            InterfaceUnitTest
             <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
               <label class="btn btn-primary btn-sm active">
-                <input type="radio" name="options" id=TestCasesTwoUnitTestsAll autocomplete="off" checked> Show All
+                <input type="radio" name="options" id=InterfaceUnitTestAll autocomplete="off" checked> Show All
               </label>
               <label class="btn btn-success btn-sm">
-                <input type="radio" name="options" id=TestCasesTwoUnitTestsPassed autocomplete="off"> Show Only Passed
+                <input type="radio" name="options" id=InterfaceUnitTestPassed autocomplete="off"> Show Only Passed
               </label>
               <label class="btn btn-danger btn-sm">
-                <input type="radio" name="options" id=TestCasesTwoUnitTestsFailed autocomplete="off"> Show Only Failed
+                <input type="radio" name="options" id=InterfaceUnitTestFailed autocomplete="off"> Show Only Failed
               </label>
 			  <label class="btn btn-warning btn-sm">
-                <input type="radio" name="options" id=TestCasesTwoUnitTestsDisabled autocomplete="off"> Show Only Disabled
+                <input type="radio" name="options" id=InterfaceUnitTestDisabled autocomplete="off"> Show Only Disabled
               </label>
             </div>
           </h5>
@@ -250,7 +233,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-primary">
-                    Number of tests: 3
+                    Number of tests: 5
                   </span>
                 </h4>
 
@@ -259,7 +242,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-success">
-                    Passed: 1
+                    Passed: 5
                   </span>
                 </h4>
 
@@ -268,7 +251,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-danger">
-                    Failed: 1
+                    Failed: 0
                   </span>
                 </h4>
 
@@ -277,7 +260,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-warning">
-                    Disabled: 1
+                    Disabled: 0
                   </span>
                 </h4>
 
@@ -285,106 +268,144 @@ Expected: true</p>
             </div>
           </div>
 
-          <div class="accordion" id=TestCasesTwoUnitTestsFailedTests>
+          <div class="accordion" id=InterfaceUnitTestFailedTests>
             
               
             
               
-                <div class="card border-danger mb-3">
-                  <div class="card-header" id=TestThatFailesTwoFailedHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-danger" type="button" data-toggle="collapse" data-target=#TestThatFailesTwoFailedCollapse aria-expanded="false" aria-controls=TestThatFailesTwoFailedCollapse>
-                        TestThatFailesTwo
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=TestThatFailesTwoFailedCollapse class="collapse" aria-labelledby=TestThatFailesTwoFailedHeading data-parent=#TestCasesTwoUnitTestsFailedTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
-                      
-                        <p class="card-text">Failure: c:\users\spencer.robertson\documents\projects\cid\web services testing\webservicestests\webservicestests\test_cases_two.cpp:166
-Value of: FALSE
-  Actual: false
-Expected: true</p>
-                      
-                    </div>
-                  </div>
-                </div>
+            
+              
+            
               
             
               
             
           </div>
-          <div class="accordion" id=TestCasesTwoUnitTestsPassedTests>
+          <div class="accordion" id=InterfaceUnitTestPassedTests>
             
               
                 <div class="card border-success mb-3">
-                  <div class="card-header" id=TestThatPassesTwoPassedHeading>
+                  <div class="card-header" id=InterfaceInitPassedHeading>
                     <h2 class="mb-0">
-                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#TestThatPassesTwoPassedCollapse aria-expanded="false" aria-controls=TestThatPassesTwoPassedCollapse>
-                        TestThatPassesTwo
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceInitPassedCollapse aria-expanded="false" aria-controls=InterfaceInitPassedCollapse>
+                        InterfaceInit
                       </button>
                     </h2>
                   </div>
 
-                  <div id=TestThatPassesTwoPassedCollapse class="collapse" aria-labelledby=TestThatPassesTwoPassedHeading data-parent=#TestCasesTwoUnitTestsPassedTests>
+                  <div id=InterfaceInitPassedCollapse class="collapse" aria-labelledby=InterfaceInitPassedHeading data-parent=#InterfaceUnitTestPassedTests>
                     <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
+                      <h5 class="card-title">Time: 0</h5>
                     </div>
                   </div>
                 </div>
               
             
               
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=InterfaceNoInitPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceNoInitPassedCollapse aria-expanded="false" aria-controls=InterfaceNoInitPassedCollapse>
+                        InterfaceNoInit
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InterfaceNoInitPassedCollapse class="collapse" aria-labelledby=InterfaceNoInitPassedHeading data-parent=#InterfaceUnitTestPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0</h5>
+                    </div>
+                  </div>
+                </div>
+              
             
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=InterfaceNoAccessPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceNoAccessPassedCollapse aria-expanded="false" aria-controls=InterfaceNoAccessPassedCollapse>
+                        InterfaceNoAccess
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InterfaceNoAccessPassedCollapse class="collapse" aria-labelledby=InterfaceNoAccessPassedHeading data-parent=#InterfaceUnitTestPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.002</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=InterfaceFaultPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceFaultPassedCollapse aria-expanded="false" aria-controls=InterfaceFaultPassedCollapse>
+                        InterfaceFault
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InterfaceFaultPassedCollapse class="collapse" aria-labelledby=InterfaceFaultPassedHeading data-parent=#InterfaceUnitTestPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.001</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=InterfaceFatalPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceFatalPassedCollapse aria-expanded="false" aria-controls=InterfaceFatalPassedCollapse>
+                        InterfaceFatal
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InterfaceFatalPassedCollapse class="collapse" aria-labelledby=InterfaceFatalPassedHeading data-parent=#InterfaceUnitTestPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.001</h5>
+                    </div>
+                  </div>
+                </div>
               
             
           </div>
-		  <div class="accordion" id=TestCasesTwoUnitTestsDisabledTests>
+		  <div class="accordion" id=InterfaceUnitTestDisabledTests>
             
               
             
               
             
               
-                <div class="card border-warning mb-3">
-                  <div class="card-header" id=DISABLED_TestThatIsDisabledTwoDisabledHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-warning" type="button" data-toggle="collapse" data-target=#DISABLED_TestThatIsDisabledTwoDisabledCollapse aria-expanded="false" aria-controls=DISABLED_TestThatIsDisabledTwoDisabledCollapse>
-                        DISABLED_TestThatIsDisabledTwo
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=DISABLED_TestThatIsDisabledTwoDisabledCollapse class="collapse" aria-labelledby=DISABLED_TestThatIsDisabledTwoDisabledHeading data-parent=#TestCasesTwoUnitTestsDisabledTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Disabled Test</h5>
-                    </div>
-                  </div>
-                </div>
+            
+              
+            
               
             
           </div>
         </div>
       </div>
     
-      <div class="card test-suite-container" id=TestCasesThreeUnitTests>
+      <div class="card test-suite-container" id=EstimatorModule>
         <div class="card-header">
           <h5>
-            TestCasesThreeUnitTests
+            EstimatorModule
             <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
               <label class="btn btn-primary btn-sm active">
-                <input type="radio" name="options" id=TestCasesThreeUnitTestsAll autocomplete="off" checked> Show All
+                <input type="radio" name="options" id=EstimatorModuleAll autocomplete="off" checked> Show All
               </label>
               <label class="btn btn-success btn-sm">
-                <input type="radio" name="options" id=TestCasesThreeUnitTestsPassed autocomplete="off"> Show Only Passed
+                <input type="radio" name="options" id=EstimatorModulePassed autocomplete="off"> Show Only Passed
               </label>
               <label class="btn btn-danger btn-sm">
-                <input type="radio" name="options" id=TestCasesThreeUnitTestsFailed autocomplete="off"> Show Only Failed
+                <input type="radio" name="options" id=EstimatorModuleFailed autocomplete="off"> Show Only Failed
               </label>
 			  <label class="btn btn-warning btn-sm">
-                <input type="radio" name="options" id=TestCasesThreeUnitTestsDisabled autocomplete="off"> Show Only Disabled
+                <input type="radio" name="options" id=EstimatorModuleDisabled autocomplete="off"> Show Only Disabled
               </label>
             </div>
           </h5>
@@ -396,7 +417,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-primary">
-                    Number of tests: 3
+                    Number of tests: 4
                   </span>
                 </h4>
 
@@ -405,7 +426,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-success">
-                    Passed: 1
+                    Passed: 4
                   </span>
                 </h4>
 
@@ -414,7 +435,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-danger">
-                    Failed: 1
+                    Failed: 0
                   </span>
                 </h4>
 
@@ -423,7 +444,7 @@ Expected: true</p>
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-warning">
-                    Disabled: 1
+                    Disabled: 0
                   </span>
                 </h4>
 
@@ -431,84 +452,549 @@ Expected: true</p>
             </div>
           </div>
 
-          <div class="accordion" id=TestCasesThreeUnitTestsFailedTests>
+          <div class="accordion" id=EstimatorModuleFailedTests>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+          <div class="accordion" id=EstimatorModulePassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=DeriveStatePassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#DeriveStatePassedCollapse aria-expanded="false" aria-controls=DeriveStatePassedCollapse>
+                        DeriveState
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=DeriveStatePassedCollapse class="collapse" aria-labelledby=DeriveStatePassedHeading data-parent=#EstimatorModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.105</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=DisabledEstimationPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#DisabledEstimationPassedCollapse aria-expanded="false" aria-controls=DisabledEstimationPassedCollapse>
+                        DisabledEstimation
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=DisabledEstimationPassedCollapse class="collapse" aria-labelledby=DisabledEstimationPassedHeading data-parent=#EstimatorModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.206</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=EstimationPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#EstimationPassedCollapse aria-expanded="false" aria-controls=EstimationPassedCollapse>
+                        Estimation
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=EstimationPassedCollapse class="collapse" aria-labelledby=EstimationPassedHeading data-parent=#EstimatorModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.638</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=EstimateForAllInputsPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#EstimateForAllInputsPassedCollapse aria-expanded="false" aria-controls=EstimateForAllInputsPassedCollapse>
+                        EstimateForAllInputs
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=EstimateForAllInputsPassedCollapse class="collapse" aria-labelledby=EstimateForAllInputsPassedHeading data-parent=#EstimatorModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.976</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=EstimatorModuleDisabledTests>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=Wifi>
+        <div class="card-header">
+          <h5>
+            Wifi
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=WifiAll autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=WifiPassed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=WifiFailed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=WifiDisabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 7
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 7
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 0
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=WifiFailedTests>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+          <div class="accordion" id=WifiPassedTests>
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=InitPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InitPassedCollapse aria-expanded="false" aria-controls=InitPassedCollapse>
+                        Init
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InitPassedCollapse class="collapse" aria-labelledby=InitPassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=CRCPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#CRCPassedCollapse aria-expanded="false" aria-controls=CRCPassedCollapse>
+                        CRC
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=CRCPassedCollapse class="collapse" aria-labelledby=CRCPassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=MultipleFramePassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#MultipleFramePassedCollapse aria-expanded="false" aria-controls=MultipleFramePassedCollapse>
+                        MultipleFrame
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=MultipleFramePassedCollapse class="collapse" aria-labelledby=MultipleFramePassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.011</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=ConsecutiveFramePassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#ConsecutiveFramePassedCollapse aria-expanded="false" aria-controls=ConsecutiveFramePassedCollapse>
+                        ConsecutiveFrame
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=ConsecutiveFramePassedCollapse class="collapse" aria-labelledby=ConsecutiveFramePassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.013</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=IncompleteMessage1PassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#IncompleteMessage1PassedCollapse aria-expanded="false" aria-controls=IncompleteMessage1PassedCollapse>
+                        IncompleteMessage1
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=IncompleteMessage1PassedCollapse class="collapse" aria-labelledby=IncompleteMessage1PassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.002</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=IncompleteMessage2PassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#IncompleteMessage2PassedCollapse aria-expanded="false" aria-controls=IncompleteMessage2PassedCollapse>
+                        IncompleteMessage2
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=IncompleteMessage2PassedCollapse class="collapse" aria-labelledby=IncompleteMessage2PassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.017</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=TransmitAndReceivePassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#TransmitAndReceivePassedCollapse aria-expanded="false" aria-controls=TransmitAndReceivePassedCollapse>
+                        TransmitAndReceive
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=TransmitAndReceivePassedCollapse class="collapse" aria-labelledby=TransmitAndReceivePassedHeading data-parent=#WifiPassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.003</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+		  <div class="accordion" id=WifiDisabledTests>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="card test-suite-container" id=TriggerModule>
+        <div class="card-header">
+          <h5>
+            TriggerModule
+            <div class="btn-group btn-group-toggle test-button" data-toggle="buttons">
+              <label class="btn btn-primary btn-sm active">
+                <input type="radio" name="options" id=TriggerModuleAll autocomplete="off" checked> Show All
+              </label>
+              <label class="btn btn-success btn-sm">
+                <input type="radio" name="options" id=TriggerModulePassed autocomplete="off"> Show Only Passed
+              </label>
+              <label class="btn btn-danger btn-sm">
+                <input type="radio" name="options" id=TriggerModuleFailed autocomplete="off"> Show Only Failed
+              </label>
+			  <label class="btn btn-warning btn-sm">
+                <input type="radio" name="options" id=TriggerModuleDisabled autocomplete="off"> Show Only Disabled
+              </label>
+            </div>
+          </h5>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-primary">
+                    Number of tests: 6
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-success">
+                    Passed: 4
+                  </span>
+                </h4>
+
+              </div>
+              <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-danger">
+                    Failed: 2
+                  </span>
+                </h4>
+
+              </div>
+			  <div class="col-sm">
+
+                <h4 class="number-container">
+                  <span class="badge badge-pill badge-warning">
+                    Disabled: 0
+                  </span>
+                </h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id=TriggerModuleFailedTests>
+            
+              
+                <div class="card border-danger mb-3">
+                  <div class="card-header" id=Trigger_AllFailedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-danger" type="button" data-toggle="collapse" data-target=#Trigger_AllFailedCollapse aria-expanded="false" aria-controls=Trigger_AllFailedCollapse>
+                        Trigger_All
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=Trigger_AllFailedCollapse class="collapse" aria-labelledby=Trigger_AllFailedHeading data-parent=#TriggerModuleFailedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.007</h5>
+                      
+                        <p class="card-text">Failure: 05_UnitTest\Test.cpp:105
+Expected equality of these values:
+  TRIGGER_STATE
+    Which is: 1
+  instance.next_state
+    Which is: 0</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+            
+              
+            
+              
             
               
             
               
                 <div class="card border-danger mb-3">
-                  <div class="card-header" id=TestThatFailesThreeFailedHeading>
+                  <div class="card-header" id=Trigger_DynamicFailedHeading>
                     <h2 class="mb-0">
-                      <button class="btn btn-link text-danger" type="button" data-toggle="collapse" data-target=#TestThatFailesThreeFailedCollapse aria-expanded="false" aria-controls=TestThatFailesThreeFailedCollapse>
-                        TestThatFailesThree
+                      <button class="btn btn-link text-danger" type="button" data-toggle="collapse" data-target=#Trigger_DynamicFailedCollapse aria-expanded="false" aria-controls=Trigger_DynamicFailedCollapse>
+                        Trigger_Dynamic
                       </button>
                     </h2>
                   </div>
 
-                  <div id=TestThatFailesThreeFailedCollapse class="collapse" aria-labelledby=TestThatFailesThreeFailedHeading data-parent=#TestCasesThreeUnitTestsFailedTests>
+                  <div id=Trigger_DynamicFailedCollapse class="collapse" aria-labelledby=Trigger_DynamicFailedHeading data-parent=#TriggerModuleFailedTests>
                     <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
+                      <h5 class="card-title">Time: 0.018</h5>
                       
-                        <p class="card-text">Failure: c:\users\spencer.robertson\documents\projects\cid\web services testing\webservicestests\webservicestests\test_cases_three.cpp:138
-Value of: FALSE
-  Actual: false
-Expected: true</p>
+                        <p class="card-text">Failure: 05_UnitTest\Test.cpp:1517
+Expected equality of these values:
+  1
+  output.trigger
+    Which is: 0</p>
                       
                     </div>
                   </div>
                 </div>
               
             
-              
-            
           </div>
-          <div class="accordion" id=TestCasesThreeUnitTestsPassedTests>
+          <div class="accordion" id=TriggerModulePassedTests>
+            
+              
             
               
                 <div class="card border-success mb-3">
-                  <div class="card-header" id=TestThatPassesThreePassedHeading>
+                  <div class="card-header" id=Trigger_FailedPassedHeading>
                     <h2 class="mb-0">
-                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#TestThatPassesThreePassedCollapse aria-expanded="false" aria-controls=TestThatPassesThreePassedCollapse>
-                        TestThatPassesThree
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#Trigger_FailedPassedCollapse aria-expanded="false" aria-controls=Trigger_FailedPassedCollapse>
+                        Trigger_Failed
                       </button>
                     </h2>
                   </div>
 
-                  <div id=TestThatPassesThreePassedCollapse class="collapse" aria-labelledby=TestThatPassesThreePassedHeading data-parent=#TestCasesThreeUnitTestsPassedTests>
+                  <div id=Trigger_FailedPassedCollapse class="collapse" aria-labelledby=Trigger_FailedPassedHeading data-parent=#TriggerModulePassedTests>
                     <div class="card-body">
-                      <h5 class="card-title">Time: 0.002s</h5>
+                      <h5 class="card-title">Time: 0.009</h5>
                     </div>
                   </div>
                 </div>
               
             
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=Trigger_LostPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#Trigger_LostPassedCollapse aria-expanded="false" aria-controls=Trigger_LostPassedCollapse>
+                        Trigger_Lost
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=Trigger_LostPassedCollapse class="collapse" aria-labelledby=Trigger_LostPassedHeading data-parent=#TriggerModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.01</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=Trigger_StandbyPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#Trigger_StandbyPassedCollapse aria-expanded="false" aria-controls=Trigger_StandbyPassedCollapse>
+                        Trigger_Standby
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=Trigger_StandbyPassedCollapse class="collapse" aria-labelledby=Trigger_StandbyPassedHeading data-parent=#TriggerModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.012</h5>
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="card border-success mb-3">
+                  <div class="card-header" id=Trigger_ErrorPassedHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#Trigger_ErrorPassedCollapse aria-expanded="false" aria-controls=Trigger_ErrorPassedCollapse>
+                        Trigger_Error
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=Trigger_ErrorPassedCollapse class="collapse" aria-labelledby=Trigger_ErrorPassedHeading data-parent=#TriggerModulePassedTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Time: 0.005</h5>
+                    </div>
+                  </div>
+                </div>
               
             
               
             
           </div>
-		  <div class="accordion" id=TestCasesThreeUnitTestsDisabledTests>
+		  <div class="accordion" id=TriggerModuleDisabledTests>
             
               
             
               
             
               
-                <div class="card border-warning mb-3">
-                  <div class="card-header" id=DISABLED_TestThatIsDisabledThreeDisabledHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-warning" type="button" data-toggle="collapse" data-target=#DISABLED_TestThatIsDisabledThreeDisabledCollapse aria-expanded="false" aria-controls=DISABLED_TestThatIsDisabledThreeDisabledCollapse>
-                        DISABLED_TestThatIsDisabledThree
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=DISABLED_TestThatIsDisabledThreeDisabledCollapse class="collapse" aria-labelledby=DISABLED_TestThatIsDisabledThreeDisabledHeading data-parent=#TestCasesThreeUnitTestsDisabledTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Disabled Test</h5>
-                    </div>
-                  </div>
-                </div>
+            
+              
+            
+              
+            
               
             
           </div>
