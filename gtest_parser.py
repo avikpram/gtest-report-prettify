@@ -8,7 +8,7 @@ from junitparser import *
 TEMPLATE_FILE = "gtest_template.html"
 OUTPUT_FILE = "gtest_output.html"
 
-def process_input(input_file):
+def process_input(input_file, disabled_num=0):
     """ Processes the input file.
         Will return a JSON object to be used by the HTML parser.
         If the file is in XML format it will be turned into a JSON object.
@@ -21,14 +21,14 @@ def process_input(input_file):
             data = json.load(gtest_json)
         elif input_file.endswith('.xml'):
             # Need to turn the XML into the same format as the JSON
-            data = process_xml(gtest_json)
+            data = process_xml(gtest_json, disabled_num)
         else:
             print("Unknown file type.")
             return
 
     return data
 
-def process_xml(xml):
+def process_xml(xml, disabled_num=0):
     """ Processes the XML file.
         Will return a JSON object that matches that created by GTEST.
     """
@@ -37,15 +37,22 @@ def process_xml(xml):
     root = tree.getroot()
     overviewName = root.attrib['name']
     if overviewName.startswith("GTestClass_"):
-      overviewName = overviewName[11:]   
+      overviewName = overviewName[11:] 
+      
     overviewTests = int(root.attrib['tests'])
     overviewFailed = int(root.attrib['failures'])
-    overviewDisabled = 0 # int(root.attrib['disabled'])
+
+    #
+    # TODO Read 'disabled' status to xml directly
+    # Currently total-disabled number is passed separately
+    #
+        
+    overviewDisabled = disabled_num # int(root.attrib['disabled'])
     data = {
         'name': overviewName,
         'tests': overviewTests,
         'failures': overviewFailed,
-		'disabled': overviewDisabled,
+		    'disabled': overviewDisabled,
         'testsuites': []
     }
 
@@ -131,24 +138,29 @@ if __name__ == "__main__":
             xml_list.append(os.path.join(input_path, f))
             
         for f in xml_list:
-          newXml = JUnitXml.fromfile(f)
-          test_num += newXml.tests
-          fail_num += newXml.failures
-          # disable_num += newXml.skipped
-          # print newXml.skipped
+          # extract disabled test statistic
+          suite = JUnitXml.fromfile(f)._elem.findall('testsuite')[0]
+          suite.attrib['skipped'] = suite.attrib['disabled']
           
+          # accumulate disabled test statistic
+          disable_num += int(suite.attrib['skipped'])
+          
+          # merge xml
           mergedXml = mergedXml + JUnitXml.fromfile(f)
             
         mergedXml.name = 'AllTests'
-        mergedXml.tests = test_num
-        mergedXml.failures = fail_num
-        # mergedXml.skipped = disable_num
-        # mergedXml.disabled = IntAttr('disabled')
+        mergedXml.update_statistics()
+
+        #
+        # TODO Add 'disabled' status to xml directly
+        # Currently total-disabled number is passed separately
+        #
+        
         if not os.path.exists(os.path.join(input_path, 'temp')):
           os.makedirs(os.path.join(input_path, 'temp'))
     
         mergedXml.write(os.path.join(input_path, 'temp', 'merged.xml'))
-        json_data = process_input(os.path.join(input_path, 'temp', 'merged.xml'))
+        json_data = process_input(os.path.join(input_path, 'temp', 'merged.xml'), disable_num)
         
     else:
         print "\nProcess single xml file\n"

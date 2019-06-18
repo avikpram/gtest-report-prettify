@@ -32,7 +32,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-success">
-                  Passed: 21
+                  Passed: 20
                 </span>
               </h4>
 
@@ -50,7 +50,7 @@
 
               <h4 class="number-container">
                 <span class="badge badge-pill badge-warning">
-                  Disabled: 0
+                  Disabled: 1
                 </span>
               </h4>
 
@@ -64,7 +64,8 @@
             <a href=#BoxTest class="list-group-item list-group-item-action list-group-item-success">
             
             BoxTest
-            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-warning float-right">0</span>
+            <span class="badge badge-pill badge-danger  float-right">0</span>
             <span class="badge badge-pill badge-success float-right">1</span>
             <span class="badge badge-pill badge-primary float-right">1</span>
             </a>
@@ -73,8 +74,9 @@
             <a href=#InterfaceUnitTest class="list-group-item list-group-item-action list-group-item-success">
             
             InterfaceUnitTest
-            <span class="badge badge-pill badge-danger float-right">0</span>
-            <span class="badge badge-pill badge-success float-right">5</span>
+            <span class="badge badge-pill badge-warning float-right">1</span>
+            <span class="badge badge-pill badge-danger  float-right">0</span>
+            <span class="badge badge-pill badge-success float-right">4</span>
             <span class="badge badge-pill badge-primary float-right">5</span>
             </a>
           
@@ -82,7 +84,8 @@
             <a href=#EstimatorModule class="list-group-item list-group-item-action list-group-item-success">
             
             EstimatorModule
-            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-warning float-right">0</span>
+            <span class="badge badge-pill badge-danger  float-right">0</span>
             <span class="badge badge-pill badge-success float-right">4</span>
             <span class="badge badge-pill badge-primary float-right">4</span>
             </a>
@@ -91,7 +94,8 @@
             <a href=#Wifi class="list-group-item list-group-item-action list-group-item-success">
             
             Wifi
-            <span class="badge badge-pill badge-danger float-right">0</span>
+            <span class="badge badge-pill badge-warning float-right">0</span>
+            <span class="badge badge-pill badge-danger  float-right">0</span>
             <span class="badge badge-pill badge-success float-right">7</span>
             <span class="badge badge-pill badge-primary float-right">7</span>
             </a>
@@ -100,7 +104,8 @@
             <a href=#TriggerModule class="list-group-item list-group-item-action list-group-item-danger">
             
             TriggerModule
-            <span class="badge badge-pill badge-danger float-right">2</span>
+            <span class="badge badge-pill badge-warning float-right">0</span>
+            <span class="badge badge-pill badge-danger  float-right">2</span>
             <span class="badge badge-pill badge-success float-right">4</span>
             <span class="badge badge-pill badge-primary float-right">6</span>
             </a>
@@ -242,7 +247,7 @@
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-success">
-                    Passed: 5
+                    Passed: 4
                   </span>
                 </h4>
 
@@ -260,7 +265,7 @@
 
                 <h4 class="number-container">
                   <span class="badge badge-pill badge-warning">
-                    Disabled: 0
+                    Disabled: 1
                   </span>
                 </h4>
 
@@ -356,22 +361,6 @@
               
             
               
-                <div class="card border-success mb-3">
-                  <div class="card-header" id=InterfaceFatalPassedHeading>
-                    <h2 class="mb-0">
-                      <button class="btn btn-link text-success" type="button" data-toggle="collapse" data-target=#InterfaceFatalPassedCollapse aria-expanded="false" aria-controls=InterfaceFatalPassedCollapse>
-                        InterfaceFatal
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id=InterfaceFatalPassedCollapse class="collapse" aria-labelledby=InterfaceFatalPassedHeading data-parent=#InterfaceUnitTestPassedTests>
-                    <div class="card-body">
-                      <h5 class="card-title">Time: 0.001</h5>
-                    </div>
-                  </div>
-                </div>
-              
             
           </div>
 		  <div class="accordion" id=InterfaceUnitTestDisabledTests>
@@ -384,6 +373,22 @@
             
               
             
+              
+                <div class="card border-warning mb-3">
+                  <div class="card-header" id=InterfaceFatalDisabledHeading>
+                    <h2 class="mb-0">
+                      <button class="btn btn-link text-warning" type="button" data-toggle="collapse" data-target=#InterfaceFatalDisabledCollapse aria-expanded="false" aria-controls=InterfaceFatalDisabledCollapse>
+                        InterfaceFatal
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id=InterfaceFatalDisabledCollapse class="collapse" aria-labelledby=InterfaceFatalDisabledHeading data-parent=#InterfaceUnitTestDisabledTests>
+                    <div class="card-body">
+                      <h5 class="card-title">Disabled Test</h5>
+                    </div>
+                  </div>
+                </div>
               
             
           </div>
