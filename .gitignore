@@ -1,2 +1,2 @@
 in/**/*.xml
-out/**/*.html
+gtest_output.html

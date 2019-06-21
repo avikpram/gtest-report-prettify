@@ -23,8 +23,8 @@ def process_input(input_file, disabled_num=0):
             # Need to turn the XML into the same format as the JSON
             data = process_xml(gtest_json, disabled_num)
         else:
-            print("Unknown file type.")
-            return
+            print("ERROR: Unknown file type.")
+            sys.exit()
 
     return data
 
@@ -91,7 +91,14 @@ def process_xml(xml, disabled_num=0):
                     'status': testStatus,
                     'time': testTime
                 })
-        print(tempTest)
+        
+        # print(tempTest)
+        for t in tempTest:
+          print testSuitename+"."+t['name']+": "+t['status']
+          
+        print "> "+str(totalTests)+", "+str(failed)+", "+str(disabled)
+        print "------------------"
+        
         tempTestSuite = {
             'name': testSuitename,
             'tests': totalTests,
@@ -111,16 +118,19 @@ def create_html(data):
     templateEnv = Environment(loader=templateLoader)
     template = templateEnv.get_template(TEMPLATE_FILE)
     
-    if not os.path.exists(os.path.join('.', 'out')):
-      os.makedirs(os.path.join('.', 'out'))    
-
-    with open(os.path.join('.', 'out', OUTPUT_FILE), "w") as output_html:
+    with open(os.path.join('.', OUTPUT_FILE), "w") as output_html:
         output_html.write(template.render(test_overview=data, test_suites=data['testsuites']))
+        
+    print "...\nTest report available at: "+str(os.path.join('.', OUTPUT_FILE))
 
 if __name__ == "__main__":
-    if os.path.isdir(sys.argv[1]):  
+    if len(sys.argv) < 2:
+      print "\nERROR: No input path or file provided\n"
+      sys.exit()
+
+    if os.path.isdir(sys.argv[1]):
         input_path = sys.argv[1]
-        print "\nCombine all available xml files into one\n"
+        print "\nCombine all available XML files and process\n...\n"
         
         try:
             os.remove(os.path.join(input_path, 'temp', 'merged.xml'))
@@ -145,14 +155,14 @@ if __name__ == "__main__":
           # accumulate disabled test statistic
           disable_num += int(suite.attrib['skipped'])
           
-          # merge xml
+          # merge XML
           mergedXml = mergedXml + JUnitXml.fromfile(f)
             
         mergedXml.name = 'AllTests'
         mergedXml.update_statistics()
 
         #
-        # TODO Add 'disabled' status to xml directly
+        # TODO Add 'disabled' status to XML directly
         # Currently total-disabled number is passed separately
         #
         
@@ -162,8 +172,12 @@ if __name__ == "__main__":
         mergedXml.write(os.path.join(input_path, 'temp', 'merged.xml'))
         json_data = process_input(os.path.join(input_path, 'temp', 'merged.xml'), disable_num)
         
-    else:
-        print "\nProcess single xml file\n"
+    elif os.path.isfile(sys.argv[1]):
+        print "\nProcess single XML/JSON file\n...\n"
         json_data = process_input(sys.argv[1])
+        
+    else:
+        print "\nERROR: Incorrect path or filename provided\n"
+        sys.exit()
         
     create_html(json_data)
